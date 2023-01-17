@@ -1,0 +1,104 @@
+GÜN_01
+
+Product Owner
+
+Business Analist : Müsteri taleplerini alir.
+
+Teknik Ekip : Developer,Tester ,Scrum Master.
+
+
+
+Önceden : TEST DRIVEN DEVELOPMENT
+
+BA planlama yapar,Developera verir,sonra Testera giderdi sonra ürün cikardi ortaya.Fakat ürün ciktiktan sonra mesela ürün olmus ama kullanici dostu olmamis.
+
+Sonra bu metodoloji degisti
+
+
+
+Sonra: BEHAVIOR DRIVEN DEVELOPMENT – BDD YANI AGILE
+
+ Planlama
+
+Tester –adimlari yazdi jirada -senaryoyu(eskiden tester developerdan sonraydi)
+
+Developer-testerin yazdigi test caselere göre calismak zorunda kaldi
+
+En ufak bir asamada hemen müsteriye gönder.
+
+Daily meet:dün ne yaptim,bugun ne yapacagim
+
+Sprint        :2 haftada bir yapilan toplanti
+
+Review      :Gözden gecirme
+
+Retro         :Daha iyi nasil olabilirdi.
+
+
+
+Agile : Davranis odakli yani müsteri bile baktiginda neler yapildigini anliyor(login gir,buton tikla)
+
+
+
+CUCUMBER (GHERKIN) : Ortak dili saglayan test yazmamiza imkan sagliyor.Cucumber test araci ; Gherkin kullanilan dil.
+
+Not:Agile metodolojisi ile is yapiyorsaniz ve uygulama testi icin BDD kullanmiyorsaniz kendinizle celisiyorsunuzdur.
+
+Cucumber bu isin zirvesidir,testNG den de üstündür.
+
+
+
+Test BDD : Cucumber
+
+Proje yönetiminin BDD : Maven Proje yapisi.
+
+Yeni bir proje yaparken sadece kopyalama ile maven acilir.Driver ,library yükleme yok.
+
+Bu projede developer da olacak.Tek bir projenin icinde hepsi olacak.
+
+
+
+
+
+CUCUMBER
+
+En basta sunu bilecegiz,testi yapan her zaman Selenium,Cucumber onun tarzidir.
+
+1-Ilk önce proje new dedik build systemi maven sectik.
+
+2-Sonra test klasörünün altinda javanin da , 5 klasör actik.(Features files,Runners,Pages,Step Definitons,Utilities)
+
+
+
+3-Sonra Settings Plugins den Create TestNG XML,Cucumber for Java,Gherkin yükleniyor.(Bunlar intellij icin gerekli olan programlarin dil ayarlari)
+
+4-Simdi ise bize bagimliliklar yani dependecy ler gerekli :Selenium,Cucumber,TestNG,Cucumber-testNG,WebDriverManager Browserlar WebDriver
+
+Properties ayat ByteCode.
+
+Mavenrepository.com dan
+
+-Selenium Java yi alip pom a ekledik(Eger kirmizi renk olursa yenile yap)
+
+-Cucumber JVM : Java  ekliyoruz
+
+-testNG  aldik
+
+-cucumber ve testNG nin uyumlu calismasi icin de Cucumber TestNG(io olani) yi indiriyoruz.Yalniz uyumlu olmasi icin cucumber ile versiyonlari ayni olacak.(7.9 gibi)
+
+-browserlarin calismasi icin WebDriverManager indirdik bonigarcia olan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
