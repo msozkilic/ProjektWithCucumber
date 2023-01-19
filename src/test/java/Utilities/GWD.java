@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.slf4j.impl.SimpleLogger;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +18,7 @@ public class GWD {
         if (driver==null) {
             Logger.getLogger("").setLevel(Level.SEVERE);
             System.setProperty(ChromeDriverService.CHROME_DRIVER_APPEND_LOG_PROPERTY,"true");
+            System.setProperty(SimpleLogger.DEFAULT_LOG_LEVEL_KEY,"Error");
 
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
