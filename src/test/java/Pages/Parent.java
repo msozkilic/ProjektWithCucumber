@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
-
 public class Parent {
    public WebElement sendKeysFunction(WebElement element, String value){
 
@@ -16,21 +15,20 @@ public class Parent {
        scrollToElement(element);
        element.clear();
        element.sendKeys(value);
-       return element;
-   }
-   public void clickFunction(WebElement element){
+       return element;}
+
+    public void clickFunction(WebElement element){
      waitUntilVisible(element);
      scrollToElement(element);
-     element.click();
-   }
-   public void waitUntilVisible(WebElement element){
-       WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+     element.click();}
+
+    public void waitUntilVisible(WebElement element){
+       WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
        wait.until(ExpectedConditions.visibilityOf(element));
    }
    public void scrollToElement(WebElement element){
        JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
        js.executeScript("arguments[0].scrollIntoView();",element);
-
    }
    public void verifyContainsText(WebElement element,String text){
        waitUntilVisible(element);

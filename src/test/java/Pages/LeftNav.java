@@ -11,24 +11,21 @@ public class LeftNav extends Parent {
     public LeftNav() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
-    @FindBy(xpath="span[text()='Setup'])[1]")
+    @FindBy(xpath="(//span[text()='Setup'])[1]\"")
     private WebElement setupOne;
 
     @FindBy(xpath="span[text()='Parameters']")
     private WebElement parameters;
 
     @FindBy(xpath="span[text()='Countries']")
-    private WebElement Countries;
-
+    private WebElement countries;
     WebElement myElement;
     public void findAndClick(String strElement){
 
         switch (strElement){
             case "setupOne" :myElement=setupOne; break;
             case "parameters" :myElement=parameters; break;
-            case "Countries" :myElement=Countries; break;
-
-        }
+            case "countries" :myElement=countries; break;}
         clickFunction(myElement);
     }
 }
