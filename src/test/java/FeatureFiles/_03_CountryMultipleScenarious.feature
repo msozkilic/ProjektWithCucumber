@@ -10,6 +10,6 @@ Feature: Country Multi Scenario
     When Create a country
     Then Success message should be displayed
 
-    Scenario: Create a country parameter data
-      When Create a country name as "Serkan" code as "code2"
-      Then Success message should be displayed
+  Scenario: Create a country parameter data
+    When Create a country name as "Serkan" code as "code2"
+    Then Success message should be displayed
