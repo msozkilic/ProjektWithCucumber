@@ -41,6 +41,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname=\"shortName\"]//input")
+    private WebElement shortName;
+
+    @FindBy(xpath = "//div[contains(text(),'succcessfully'")
+    private WebElement alreadyExist;
+
+    @FindBy(xpath = "//button[@aria-label='Close dialog'")
+    private WebElement closeDialog;
+
+
+
     public WebElement myElement;
     public void findAndSend(String strElement,String value){
 
@@ -49,6 +60,7 @@ public class DialogContent extends Parent{
           case "password" :myElement=password;break;
           case "nameInput" :myElement=nameInput;break;
           case "codeInput" :myElement=codeInput;break;
+          case "shortName" :myElement=shortName;break;
       }
       sendKeysFunction(myElement,value);
     }
@@ -58,6 +70,7 @@ public class DialogContent extends Parent{
             case "loginButton" :myElement=loginButton; break;
             case "addButton" :myElement=addButton; break;
             case "saveButton" :myElement=saveButton; break;
+            case "closeDialog" :myElement=saveButton; break;
         }
 
         clickFunction(myElement);
@@ -67,6 +80,7 @@ public class DialogContent extends Parent{
         switch (strElement){
             case "dashboard" :myElement=dashboard; break;
             case "successMessage" :myElement=successMessage; break;
+            case "alreadyExist" :myElement=alreadyExist; break;
 
         }
         verifyContainsText(myElement,text);
