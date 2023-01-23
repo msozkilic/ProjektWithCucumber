@@ -1,11 +1,15 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class DialogContent extends Parent{
@@ -50,7 +54,17 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@aria-label='Close dialog'")
     private WebElement closeDialog;
 
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,'FIELD.NAME']/")
+    private WebElement searchInput;
 
+    @FindBy(xpath = "//ms-search-button//button")
+    private WebElement searchButton;
+
+    @FindBy(xpath = "//ms-delete-button//button")
+    private WebElement deletButton;
+
+    @FindBy(xpath = "//span[contains(text(),'DELETE']")
+    private WebElement deleteDialogBtn;
 
     public WebElement myElement;
     public void findAndSend(String strElement,String value){
@@ -61,6 +75,7 @@ public class DialogContent extends Parent{
           case "nameInput" :myElement=nameInput;break;
           case "codeInput" :myElement=codeInput;break;
           case "shortName" :myElement=shortName;break;
+          case "searchInput" :myElement=searchInput;break;
       }
       sendKeysFunction(myElement,value);
     }
@@ -71,6 +86,9 @@ public class DialogContent extends Parent{
             case "addButton" :myElement=addButton; break;
             case "saveButton" :myElement=saveButton; break;
             case "closeDialog" :myElement=saveButton; break;
+            case "searchButton" :myElement=searchButton; break;
+            case "deleteButton" :myElement=deletButton; break;
+            case "deleteDialogBtn" :myElement=deleteDialogBtn; break;
         }
 
         clickFunction(myElement);
@@ -85,10 +103,13 @@ public class DialogContent extends Parent{
         }
         verifyContainsText(myElement,text);
     }
+    public void searchAndDelete(String searchtText){
+        //todo arama kutucuguna kelimeyi yaz,arama butonuna bas,silme butonuna bas,diaologdaki silme but bas.,,
+     findAndSend(searchtText,"searchText");
+     findAndClick("searchButton");
 
-
-
-
-
-
+       GWD.Bekle(2);
+     findAndClick("deleteButton");
+     findAndClick("deleteDialogBtn");
+    }
 }
