@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +10,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 public class Parent {
+
    public WebElement sendKeysFunction(WebElement element, String value){
 
        waitUntilVisible(element);
@@ -34,5 +36,10 @@ public class Parent {
        waitUntilVisible(element);
        Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
    }
+    public void waitUntilLoading(){
+        WebDriverWait wait=new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar >*"),0));
+
+    }
 
 }

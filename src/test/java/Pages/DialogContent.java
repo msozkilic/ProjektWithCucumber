@@ -66,6 +66,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//span[contains(text(),'DELETE']")
     private WebElement deleteDialogBtn;
 
+    @FindBy(xpath = "//ms-text-field[contains(@formcontrolname='budgetAccountIntegrationCode']//input")
+    private WebElement integrationCode;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    private WebElement priorityCode;
+
     public WebElement myElement;
     public void findAndSend(String strElement,String value){
 
@@ -76,6 +82,8 @@ public class DialogContent extends Parent{
           case "codeInput" :myElement=codeInput;break;
           case "shortName" :myElement=shortName;break;
           case "searchInput" :myElement=searchInput;break;
+          case "integrationCode" :myElement=integrationCode;break;
+          case "priorityCode" :myElement=priorityCode;break;
       }
       sendKeysFunction(myElement,value);
     }
@@ -112,4 +120,5 @@ public class DialogContent extends Parent{
      findAndClick("deleteButton");
      findAndClick("deleteDialogBtn");
     }
+
 }
