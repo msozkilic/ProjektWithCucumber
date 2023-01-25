@@ -14,7 +14,7 @@ Feature: Datatable Functionality
     When Enter username and password and click login button
     Then User should login succesfully
 
-  Scenario Outline: Entrance Exam
+  Scenario Outline:Create and delete a Exam
     And Click on the element in the left Nav
       | entranceExam       |
       | setUpTwo           |
@@ -47,8 +47,8 @@ Feature: Datatable Functionality
     Then Success message should be displayed
     Examples:
       | ExamName    | AcademicPeriodOption | GradeLevelOption |
-      | Math exam   | option2              | option4          |
-      | IT exam     | option1              | option1          |
-      | Oracle exam | option2              | option2          |
-      | Math exam   | option1              | option3          |
+      | Math exam   | academicPeriod1      | gradeLevel2      |
+      | IT exam     | academicPeriod1      | gradeLevel2      |
+      | Oracle exam | academicPeriod1      | gradeLevel2      |
+      | Math exam   |academicPeriod1       | gradeLevel2      |
 
