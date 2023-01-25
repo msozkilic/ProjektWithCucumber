@@ -16,7 +16,7 @@ Feature: Datatable Functionality
     And Click on the element in the Dialog
       | addButton |
     And User sending the keys in Dialog content
-      | nameInput | serkanExam1 |
+      | nameInput | serkanExam2 |
 
     And Click on the element in the Form Content
 
@@ -27,5 +27,15 @@ Feature: Datatable Functionality
 
     And Click on the element in the Dialog
     |saveButton|
+
+    Then Success message should be displayed
+
+    And Click on the element in the left Nav
+      | entranceExam       |
+      | setUpTwo           |
+      | entranceExamButton |
+
+    And User delete item from Dilaog
+      |serkanExam2|
 
     Then Success message should be displayed

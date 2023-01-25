@@ -30,7 +30,7 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "((//span[contains(text(),'Dashboard')]))[2]")
     private WebElement dashboard;
 
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//buttonA")
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement addButton;
 
     @FindBy(xpath= "//ms-text-field[@formcontrolname=\"name\"]//input")
