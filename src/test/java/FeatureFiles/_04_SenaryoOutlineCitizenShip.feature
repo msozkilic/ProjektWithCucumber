@@ -6,18 +6,21 @@ Feature: Citizenship with scenario Outline
     Then User should login succesfully
     And Navigate to Cizienship page
 
-    Scenario Outline : Citizenship create
-      When User a Citizenship name as<CitizenshipName>short name as <ShortName>
-      Then Success message should be displayed
+  Scenario Outline : Citizenship create
+    When User a Citizenship name as<CitizenshipName>short name as <ShortName>
+    Then Success message should be displayed
 
-      When User a Citizenship name as<CitizenshipName>short name as <ShortName>
-      Then Already exist message should be displayed
-      And Click on close button
-      Examples:
-        |  CitizenshipName|ShortName|
-        |  vatan131|v13|
-        |  vatan132|v14|
-        |  vatan133|v15|
-        |  vatan134|v16|
-        |  vatan132|v17|
+    When User a Citizenship name as<CitizenshipName>short name as <ShortName>
+    Then Already exist message should be displayed
+    And Click on close button
+
+    When User delete the <CitizenshipName>
+    Then Success message should be displayed
+    Examples:
+      |  CitizenshipName|ShortName|
+      |  vatan231|v23|
+      |  vatan232|v24|
+      |  vatan233|v25|
+      |  vatan234|v26|
+      |  vatan232|v27|
 

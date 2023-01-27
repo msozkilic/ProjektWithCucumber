@@ -1,5 +1,4 @@
 Feature: Country Multi Scenario
-
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
@@ -11,5 +10,5 @@ Feature: Country Multi Scenario
     Then Success message should be displayed
 
   Scenario: Create a country parameter data
-    When Create a country name as "Serkan" code as "code2"
+    When Create a country name as "Serkan77" code as "code21"
     Then Success message should be displayed
