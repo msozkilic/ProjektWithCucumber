@@ -1,7 +1,7 @@
 package StepDefinitions;
 
+import Utilities.ExcelUtility;
 import Utilities.GWD;
-import com.aventstack.extentreports.service.ExtentTestManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -11,10 +11,8 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class Hooks {
     @Before
@@ -29,9 +27,16 @@ public class Hooks {
         System.out.println("senaryonun sonucu= " + scenario.getStatus());
         System.out.println("senaryo failed= " + scenario.isFailed());
 
+        //Excele sonuclari yazdiracagiz,scenario,browserTipi,zaman,
+        LocalDateTime date = null;
+        DateTimeFormatter formatter = null;
 
-        LocalDateTime date = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
+        ExcelUtility.writeExcel("src/test/java/ApachiPOI/resource/ScenarioStatus.xlsx",
+                scenario, GWD.threadBrowserName.get(), date.format(formatter));
+
+
+        date = LocalDateTime.now();
+        formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
 
 
         if (scenario.isFailed()) {
@@ -40,7 +45,7 @@ public class Hooks {
 
             TakesScreenshot screenshot = (TakesScreenshot) GWD.getDriver();
             File ekranDosyasi = screenshot.getScreenshotAs(OutputType.FILE);
-            ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
+            // ExtentTestManager.getTest().addScreenCaptureFromBase64String(getBase64Screenshot());
 
             try {
                 FileUtils.copyFile(ekranDosyasi,
@@ -50,15 +55,11 @@ public class Hooks {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
-
-
         // en son çıkmadan ekranı görelim diye bilerek koyduk
         // çalışma mantığı ile ilgilis yok.
         GWD.quitDriver();
     }
-
     public String getBase64Screenshot() {
         return ((TakesScreenshot) GWD.getDriver()).getScreenshotAs(OutputType.BASE64);
     }
