@@ -6,7 +6,8 @@ Feature: ApachePOI Citizen Functionality
     Then User should login succesfully
     And Navigate to Cizienship page
 
-    Scenario: Create and delete citizenship from Excel
-      When User Create citizenship with ApachiPOI
+  Scenario: Create citizenship from Excel
+    When User Create citizenship with ApachiPOI
 
-      Then User Delete citizenship with ApachiPOI
+  Scenario: delete citizenship from Excel
+    Then User Delete citizenship with ApachiPOI
