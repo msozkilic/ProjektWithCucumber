@@ -13,11 +13,6 @@ import org.testng.annotations.Parameters;
         plugin = {"html:target//cucumber-reports.html"}
 )
 public class _08_TesrRunnerParalel extends AbstractTestNGCucumberTests {
-    @BeforeClass
-    @Parameters("browser")
-    public void beforeClass(String browser)
-    {
-        GWD.threadBrowserName.set(browser);
 
-    }
+
 }
