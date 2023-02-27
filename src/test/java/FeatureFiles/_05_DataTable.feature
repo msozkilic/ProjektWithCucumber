@@ -1,4 +1,5 @@
 Feature: Datatable Functionality
+
   Background:
     Given Navigate to basqar
     When Enter username and password and click login button
@@ -6,43 +7,42 @@ Feature: Datatable Functionality
 
   Scenario: Create Country
     And Click on the element in the left Nav
-      |setupOne|
-      |parameters|
-      |countries |
-
+      | setupOne   |
+      | parameters |
+      | countries  |
     And Click on the element in the Dialog
-      |addButton|
+      | addButton |
     And User sending the keys in Dialog content
-      |nameInput|serkanCountry1|
-      |codeInput|123123|
+      | nameInput | serkanCountry1 |
+      | codeInput | 123123         |
 
     And Click on the element in the Dialog
-      |saveButton|
+      | saveButton |
     And Success message should be displayed
     And User delete item from Dilaog
-      |serkanCountry|
+      | serkanCountry |
     And Success message should be displayed
 
   Scenario: Create a Nationality
     And Click on the element in the left Nav
-      |setupOne|
-      |parameters|
-      |countries |
-      |nationality|
+      | setupOne    |
+      | parameters  |
+      | countries   |
+      | nationality |
 
     And Click on the element in the Dialog
-      |addButton|
+      | addButton |
 
     And User sending the keys in Dialog content
-      |nameInput|serkanCountry22|
+      | nameInput | serkanCountry22 |
 
     And Click on the element in the Dialog
-      |saveButton|
+      | saveButton |
 
     And User should login succesfully
 
     And User delete item from Dilaog
-      |serkanCountry22|
+      | serkanCountry22 |
 
     And Success message should be displayed
 
@@ -50,24 +50,24 @@ Feature: Datatable Functionality
   Scenario: Create a Fee,delete Fee
 
     And Click on the element in the left Nav
-      |setupOne|
-      |parameters|
-      |fees |
+      | setupOne   |
+      | parameters |
+      | fees       |
     And Click on the element in the Dialog
-      |addButton|
+      | addButton |
 
     And User sending the keys in Dialog content
-      |nameInput|serkanFee22|
-      |codeInput|F22|
-      |integrationCode|2322|
-      |priorityCode|5522|
+      | nameInput       | serkanFee22 |
+      | codeInput       | F22         |
+      | integrationCode | 2322        |
+      | priorityCode    | 5522        |
 
     And Click on the element in the Dialog
-      |saveButton|
+      | saveButton |
 
     And Success message should be displayed
 
     And User delete item from Dilaog
-      |serkanFee22|
+      | serkanFee22 |
 
     And Success message should be displayed
