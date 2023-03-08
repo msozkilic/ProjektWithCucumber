@@ -11,10 +11,10 @@ public class Soru extends JDBCParent {
     public void test() throws SQLException {
         ResultSet rs=statement.executeQuery("select * from city");
 
-        int cnt=1;
-        while(rs.absolute(cnt)){
+        int cnt=0;
+        while(rs.relative(1)){
             String cityName=rs.getString(2);
-            System.out.println("cityName ="+cityName);
+
             cnt++;
         }
         System.out.println(cnt);
