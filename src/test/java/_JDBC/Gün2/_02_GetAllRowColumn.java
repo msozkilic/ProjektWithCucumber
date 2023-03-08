@@ -22,8 +22,31 @@ public class _02_GetAllRowColumn extends JDBCParent{
             String columnType=rsmd.getColumnTypeName(i);
 
             System.out.println(columnType+ " "+columnName);
+        }
+    }
+    @Test
+    public void test2() throws SQLException {
+        // todo language tablosundaki tüm satirlari ve sütunlari yazdiriniz yani tüm tabloyu basliklarla
+
+        ResultSet rs= statement.executeQuery("select * from language");
+        ResultSetMetaData rsmd=rs.getMetaData();
+
+        for (int i = 1; i <rsmd.getColumnCount() ; i++) {
+            System.out.println("rsmd ="+rsmd.getColumnName(i)+" ");
+
+            System.out.println();
+
+            while(rs.next()){ //todo otomatik hep bir sonrakine gidiyor.
+                for (int j = 1; j <rsmd.getColumnCount() ; j++) {
+                    System.out.println(rs.getString(i)+" ");
+
+                    System.out.println();
+
+                }
+            }
+        }
 
 
         }
     }
-}
+
