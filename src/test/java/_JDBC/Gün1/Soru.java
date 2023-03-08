@@ -12,8 +12,11 @@ public class Soru extends JDBCParent {
         ResultSet rs=statement.executeQuery("select * from city");
 
         int cnt=0;
-        while(rs.relative(1)){
-            String cityName=rs.getString(2);
+        while(rs.next()){
+            System.out.println(rs.getString(1));
+            System.out.println(rs.getString(2));
+            System.out.println(rs.getString(3));
+
 
             cnt++;
         }
