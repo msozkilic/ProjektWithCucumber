@@ -11,8 +11,8 @@ public class Soru extends JDBCParent {
     public void test() throws SQLException {
         ResultSet rs=statement.executeQuery("select * from city");
 
-        int cnt=0;
-        while(rs.next()){
+        int cnt=1;
+        while(rs.absolute(cnt)){
             String cityName=rs.getString(2);
             System.out.println("cityName ="+cityName);
             cnt++;
