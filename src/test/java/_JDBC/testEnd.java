@@ -18,25 +18,28 @@ public class testEnd {
         ResultSet rs = statement.executeQuery("select * from actor");
 
         rs.next();
+        ResultSetMetaData rsmd=rs.getMetaData();
 
-        String firstName=rs.getString("first_name");
-        System.out.println(firstName);
+        for (int i = 1; i < rsmd.getColumnCount(); i++) {
+            System.out.println("%-20s"+rsmd.getColumnName(i));
 
-        String idName=rs.getString(2);
-        System.out.println(idName);
+            while (rs.next()){}
+            for (int j = 1; j < rsmd.getColumnCount(); j++) {
+                System.out.println("%-20s"+rs.getString(i));
+                System.out.println();
 
-        ResultSetMetaData rsmd= rs.getMetaData();
+            }
 
-        String sütünAd=rsmd.getColumnName(1);
-        System.out.println(sütünAd);
+        }
+        connection.close();
 
-        int sütunNo=rsmd.getColumnCount();
-        System.out.println(sütunNo);
+            }
+
+        }
 
 
 
-    }
-}
+
 
 
 
