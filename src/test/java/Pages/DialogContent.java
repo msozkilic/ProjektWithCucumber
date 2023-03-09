@@ -75,6 +75,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//button[@class='consent-give'])[1]")
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> nameList;
+
     public WebElement myElement;
     public void findAndSend(String strElement,String value){
 
