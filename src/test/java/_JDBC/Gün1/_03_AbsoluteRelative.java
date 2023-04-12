@@ -29,9 +29,7 @@ public class _03_AbsoluteRelative extends JDBCParent {
         title=rs.getString("title");
         System.out.println("title "+ title);
 
-        rs.relative(-5);
-        title=rs.getString("title");
-        System.out.println("title "+ title);
+
 
 
 
