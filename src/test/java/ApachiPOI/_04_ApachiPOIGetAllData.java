@@ -16,14 +16,14 @@ public static void main(String[]args)throws IOException{
         Sheet sheet=workbook.getSheet("Sayfa1");
 
         int satirSayisi=sheet.getPhysicalNumberOfRows();
-
         for (int i = 0; i <satirSayisi ; i++) {
+            Row satir=sheet.getRow(i);
 
-        Row satir=sheet.getRow(i);
-        int hücreSayisi=satir.getPhysicalNumberOfCells();
+            int hücreSayisi=satir.getPhysicalNumberOfCells();
         for (int j = 0; j <hücreSayisi ; j++) {
               Cell hücre=satir.getCell(j);
-                System.out.print(hücre+" ");
+
+              System.out.print(hücre+" ");
             
         }
                 System.out.println();
