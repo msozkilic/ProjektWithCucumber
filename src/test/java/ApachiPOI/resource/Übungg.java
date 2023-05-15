@@ -22,10 +22,19 @@ public class Übungg {
         Workbook workbook= WorkbookFactory.create(fileInputStream);
         Sheet sheet=workbook.getSheet("Sayfa 1");
 
-        Row row=sheet.getRow(0);
-        Cell cell=row.getCell(0);
+        int satirSayisi=sheet.getPhysicalNumberOfRows();
+        for (int i = 0; i < satirSayisi; i++) {
+            Row row=sheet.getRow(i);
 
-        System.out.println("cell ="+cell);
+        int hücreSayisi= row.getPhysicalNumberOfCells();
+            for (int j = 0; j < hücreSayisi; j++) {
+                Cell cell=row.getCell(j);
+
+                System.out.println("hücre "+ " ");
+            }
+
+
+            System.out.println();
 
 
 
