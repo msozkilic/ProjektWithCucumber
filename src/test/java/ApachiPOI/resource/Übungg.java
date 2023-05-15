@@ -11,36 +11,49 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Übungg {
-    public static void main (String[]args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
-        String path="src/test/java/ApachiPOI/resource/ApacheExcel2.xlsx";
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Bir kelime giriniz :");
+        String arananKelime=scanner.nextLine();
 
-        FileInputStream fileInputStream=new FileInputStream(path);
+        String dönenSonuc=bul(arananKelime);
+        System.out.println(dönenSonuc);
 
-        Workbook workbook= WorkbookFactory.create(fileInputStream);
-        Sheet sheet=workbook.getSheet("Sayfa 1");
-
-        int satirSayisi=sheet.getPhysicalNumberOfRows();
-        for (int i = 0; i < satirSayisi; i++) {
-            Row row=sheet.getRow(i);
-
-        int hücreSayisi= row.getPhysicalNumberOfCells();
-            for (int j = 0; j < hücreSayisi; j++) {
-                Cell cell=row.getCell(j);
-
-                System.out.println("hücre "+ " ");
-            }
-
-
-            System.out.println();
 
 
 
     }
 
+   public static String bul(String arananKelime){
+        String dönecek="";
+       String path = "src/test/java/ApachiPOI/resource/ApacheExcel2.xlsx";
 
+       FileInputStream fileInputStream = null;
+       Workbook workbook=null;
+       try {
+           fileInputStream = new FileInputStream(path);
+          workbook = WorkbookFactory.create(fileInputStream);
+       } catch (IOException e) {
+           throw new RuntimeException(e);
+       }
+       Sheet sheet = workbook.getSheet("Sayfa 1");
+
+       for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
+           Row row=sheet.getRow(i);
+
+           Cell cell=row.getCell(0);
+           if(cell.toString().equalsIgnoreCase(arananKelime))
+           for (int j = 0; j < sheet.getPhysicalNumberOfRows(); j++) {
+               dönecek+=sheet.getRow(j)+ " ";
+           }
+
+       }
+       return dönecek;
+   }
 
 
 }
