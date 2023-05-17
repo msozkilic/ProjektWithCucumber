@@ -28,12 +28,5 @@ public class _08_WriteInTheExcel {
         //todo sira kaydetmeye geldi ,bütün bilgile hafizada buraya kadar.
         inputStream.close();
 
-        //todo Yazma islemini YAZMA modunda acip öyle yapacagiz.
-        FileOutputStream outputStream=new FileOutputStream(path);
-        workbook.write(outputStream);
-        workbook.close();
-        outputStream.close();
-        System.out.println("islem tamamlandi.");
 
-    }
 }
