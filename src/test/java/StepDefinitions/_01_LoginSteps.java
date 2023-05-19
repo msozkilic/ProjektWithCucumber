@@ -28,5 +28,13 @@ public class _01_LoginSteps extends Parent {
         dc.findAndSend("password","TechnoStudy123");
         dc.findAndClick("loginButton");}
 
+
+    @Then("User should login succesfully")
+    public void userShouldLoginSuccessfuly(){
+        dc.findAndContainsText("dashboard","Dashboard");
+
+
+
+    }
 }
 
