@@ -17,6 +17,15 @@ public class _02_CountrySteps {
         ln.findAndClick("parameters");
         ln.findAndClick("countries");
     }
+    @When("Create a country")
+    public void create_a_country() {
+        String randomGenName= RandomStringUtils.randomAlphabetic(8);
+        String randomGenCode=RandomStringUtils.randomAlphabetic(4);
+        dc.findAndClick("addButton");
+        dc.findAndSend("nameInput", randomGenName);
+        dc.findAndSend("codeInput", randomGenCode);
+        dc.findAndClick("saveButton");
+    }
 
 
 
