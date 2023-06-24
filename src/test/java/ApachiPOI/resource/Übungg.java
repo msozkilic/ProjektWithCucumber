@@ -8,52 +8,60 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Übungg {
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Bir kelime giriniz :");
-        String arananKelime=scanner.nextLine();
-
-        String dönenSonuc=bul(arananKelime);
-        System.out.println(dönenSonuc);
-
-
-
-
     }
 
-   public static String bul(String arananKelime){
-        String dönecek="";
-       String path = "src/test/java/ApachiPOI/resource/ApacheExcel2.xlsx";
+    public static ArrayList<ArrayList<String>> findAndSend(String path, int sheet, int column) {
+        ArrayList<ArrayList<String>> tablo = new ArrayList<>();
 
-       FileInputStream fileInputStream = null;
-       Workbook workbook=null;
-       try {
-           fileInputStream = new FileInputStream(path);
-          workbook = WorkbookFactory.create(fileInputStream);
-       } catch (IOException e) {
-           throw new RuntimeException(e);
-       }
-       Sheet sheet = workbook.getSheet("Sayfa 1");
+        FileInputStream inputStream = null;
+        Workbook workbook = null;
+        try {
+            inputStream = new FileInputStream(path);
+            workbook = WorkbookFactory.create(inputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
-       for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
-           Row row=sheet.getRow(i);
-
-           Cell cell=row.getCell(0);
-           if(cell.toString().equalsIgnoreCase(arananKelime))
-           for (int j = 0; j < sheet.getPhysicalNumberOfRows(); j++) {
-               dönecek+=sheet.getRow(j)+ " ";
-           }
-
-       }
-       return dönecek;
-   }
+        Sheet sheet1 = workbook.getSheetAt(sheet);
 
 
+        for (int i = 0; i < sheet1.getPhysicalNumberOfRows(); i++) {
+            ArrayList<String> datalar = new ArrayList<>();
+            for (int j = 0; j < column; j++) {
+                datalar.add(sheet1.getRow(i).getCell(j).toString());
+
+
+                tablo.add(datalar);
+
+            }
+            return tablo;
+
+        }
+
+        return tablo;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

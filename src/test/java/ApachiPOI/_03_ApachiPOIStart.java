@@ -11,6 +11,7 @@ import java.io.IOException;
 public class _03_ApachiPOIStart {
 public static void main(String[]args) throws IOException {
         String path="src/test/java/ApachiPOI/resource/ApacheExcel2.xlsx";
+
         FileInputStream dosyaOkumaBaglantisi=new FileInputStream(path);
 
         Workbook calismaKitabi= WorkbookFactory.create(dosyaOkumaBaglantisi);
