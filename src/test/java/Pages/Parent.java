@@ -22,6 +22,11 @@ public class Parent {
        element.sendKeys(value);
        return element;}
 
+    public void clickFunction(WebElement element){
+        waitUntilVisible(element);
+        scrollToElement(element);
+        element.click();}
+
 
     //todo burada yazilan bütün metodlardan sadece 2 tanesi return olan metod.Digerleri hep void.
     //todo cünkü void olan metodlarda sadece o elementin adini yazacagiz ve metodun adini yanina yazinca calisacak
