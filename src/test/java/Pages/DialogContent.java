@@ -78,54 +78,6 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//tbody/tr/td[2]")
     public List<WebElement> nameList;
 
-    public WebElement myElement;
-    public void findAndSend(String strElement,String value){
 
-      switch (strElement){
-          case "username" :myElement=username; break;
-          case "password" :myElement=password;break;
-          case "nameInput" :myElement=nameInput;break;
-          case "codeInput" :myElement=codeInput;break;
-          case "shortName" :myElement=shortName;break;
-          case "searchInput" :myElement=searchInput;break;
-          case "integrationCode" :myElement=integrationCode;break;
-          case "priorityCode" :myElement=priorityCode;break;
-      }
-      sendKeysFunction(myElement,value);
-    }
-    public void findAndClick(String strElement){
-
-        switch (strElement){
-            case "loginButton" :myElement=loginButton; break;
-            case "addButton" :myElement=addButton; break;
-            case "saveButton" :myElement=saveButton; break;
-            case "closeDialog" :myElement=saveButton; break;
-            case "searchButton" :myElement=searchButton; break;
-            case "deleteButton" :myElement=deletButton; break;
-            case "deleteDialogBtn" :myElement=deleteDialogBtn; break;
-            case "acceptCookies" :myElement=acceptCookies; break;
-        }
-
-        clickFunction(myElement);
-    }
-    public void findAndContainsText(String strElement,String text){
-
-        switch (strElement){
-            case "dashboard" :myElement=dashboard; break;
-            case "successMessage" :myElement=successMessage; break;
-            case "alreadyExist" :myElement=alreadyExist; break;
-
-        }
-        verifyContainsText(myElement,text);
-    }
-    public void searchAndDelete(String searchtText){
-        //todo arama kutucuguna kelimeyi yaz,arama butonuna bas,silme butonuna bas,diaologdaki silme but bas.,,
-     findAndSend(searchtText,"searchText");
-     findAndClick("searchButton");
-
-       GWD.Bekle(2);
-     findAndClick("deleteButton");
-     findAndClick("deleteDialogBtn");
-    }
 
 }
