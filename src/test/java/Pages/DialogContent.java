@@ -93,6 +93,21 @@ public class DialogContent extends Parent{
         }
         sendKeysFunction(myElement,value);
     }
+    public void findAndClick(String strElement){
+
+        switch (strElement){
+            case "loginButton" :myElement=loginButton; break;
+            case "addButton" :myElement=addButton; break;
+            case "saveButton" :myElement=saveButton; break;
+            case "closeDialog" :myElement=saveButton; break;
+            case "searchButton" :myElement=searchButton; break;
+            case "deleteButton" :myElement=deletButton; break;
+            case "deleteDialogBtn" :myElement=deleteDialogBtn; break;
+            case "acceptCookies" :myElement=acceptCookies; break;
+        }
+
+        clickFunction(myElement);
+    }
 
 
 
