@@ -109,6 +109,16 @@ public class DialogContent extends Parent{
         clickFunction(myElement);
     }
 
+    public void findAndContainsText(String strElement,String text){
+
+        switch (strElement){
+            case "dashboard" :myElement=dashboard; break;
+            case "successMessage" :myElement=successMessage; break;
+            case "alreadyExist" :myElement=alreadyExist; break;
+
+        }
+        verifyContainsText(myElement,text);
+    }
 
 
 
