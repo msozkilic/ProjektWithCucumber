@@ -78,6 +78,23 @@ public class DialogContent extends Parent{
     @FindBy(xpath = "//tbody/tr/td[2]")
     public List<WebElement> nameList;
 
+    public WebElement myElement;
+    public void findAndSend(String strElement,String value){
+
+        switch (strElement){
+            case "username" :myElement=username; break;
+            case "password" :myElement=password;break;
+            case "nameInput" :myElement=nameInput;break;
+            case "codeInput" :myElement=codeInput;break;
+            case "shortName" :myElement=shortName;break;
+            case "searchInput" :myElement=searchInput;break;
+            case "integrationCode" :myElement=integrationCode;break;
+            case "priorityCode" :myElement=priorityCode;break;
+        }
+        sendKeysFunction(myElement,value);
+    }
+
+
 
 
 }
