@@ -24,6 +24,13 @@ public class FormContent extends Parent{
     private WebElement gradeLevel2;
 
     public WebElement myElement;
+    public void findAndSend(String strElement,String value){
+
+        switch (strElement){
+        }
+        sendKeysFunction(myElement,value);
+    }
+
 
 
 }
