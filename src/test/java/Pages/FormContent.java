@@ -52,7 +52,15 @@ public class FormContent extends Parent{
         verifyContainsText(myElement,text);
     }
 
+    public void searchAndDelete(String searchtText){
+        //todo arama kutucuguna kelimeyi yaz,arama butonuna bas,silme butonuna bas,diaologdaki silme but bas.,,
+        findAndSend(searchtText,"searchText");
+        findAndClick("searchButton");
 
+        GWD.Bekle(2);
+        findAndClick("deleteButton");
+        findAndClick("deleteDialogBtn");
+    }
 
 }
 
