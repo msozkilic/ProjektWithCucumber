@@ -30,6 +30,27 @@ public class FormContent extends Parent{
         }
         sendKeysFunction(myElement,value);
     }
+    public void findAndClick(String strElement){
+
+        switch (strElement){
+
+            case "academicPeriod" :myElement=academicPeriod; break;
+            case "academicPeriod1" :myElement=academicPeriod1; break;
+            case "gradeLevel" :myElement=gradeLevel; break;
+            case "gradeLevel2" :myElement=gradeLevel2; break;
+
+        }
+        clickFunction(myElement);
+    }
+    public void findAndContainsText(String strElement,String text){
+
+        switch (strElement){
+            // case "dashboard" :myElement=dashboard; break;
+
+
+        }
+        verifyContainsText(myElement,text);
+    }
 
 
 
