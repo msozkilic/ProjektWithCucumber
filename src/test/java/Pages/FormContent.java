@@ -42,6 +42,16 @@ public class FormContent extends Parent{
         }
         clickFunction(myElement);
     }
+    public void findAndContainsText(String strElement,String text){
+
+        switch (strElement){
+            // case "dashboard" :myElement=dashboard; break;
+
+
+        }
+        verifyContainsText(myElement,text);
+    }
+
 
 
 }
