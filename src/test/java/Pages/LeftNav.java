@@ -42,5 +42,25 @@ public class LeftNav extends Parent {
     @FindBy (xpath = "//span[text()='States'])")
     private WebElement states;
 
+    WebElement myElement;
+    public void findAndClick(String strElement){
 
+        switch (strElement){
+            case "setupOne" :myElement=setupOne; break;
+            case "parameters" :myElement=parameters; break;
+            case "countries" :myElement=countries; break;
+            case "citizenShip" :myElement=citizenShip; break;
+            case "nationalities":myElement=nationalities;break;
+            case "fees":myElement=fees;break;
+            case "entranceExam":myElement=entranceExam;break;
+            case "setUpTwo":myElement=setUpTwo;break;
+            case "entranceExamButton":myElement=entranceExamButton;break;
+            case "states":myElement=states;break;
+
+
+
+
+        }
+        clickFunction(myElement);
+    }
 }
