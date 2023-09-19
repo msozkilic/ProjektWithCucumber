@@ -41,5 +41,33 @@ public class DBUtility {
         for (List<String>satir:tablo)
             System.out.println("satir =" + satir);
     }
+    public static List<List<String>>getListData(String query){
+        //todo bütün satirlari ve sutunlari bu liste at
+        List<List<String>>tablo=new ArrayList<>();
 
+        //todo database baglantisini ac
+        DBConnectionOpen();
+
+        try {
+            //todo sorguyu calistir.
+            ResultSet rs = statement.executeQuery("select * from language");
+
+            //todo bütün satirlari ve o satirlardaki sütunlari oku ve tabloya ekle
+            int columnSayisi=rs.getMetaData().getColumnCount();
+            while (rs.next())
+            {
+                List<String>satir=new ArrayList<>();
+                for (int i = 0; i < columnSayisi; i++) {
+                    satir.add(rs.getString(i));
+
+                }
+                tablo.add(satir);
+            }}
+        catch (Exception ex){
+            System.out.println("ex.getMessage"+ex.getMessage());
+        }
+        //todo database baglantisini kapat
+        DBConnectionClose();
+        return tablo;
+    }
 }
