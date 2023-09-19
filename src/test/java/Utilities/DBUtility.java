@@ -34,5 +34,12 @@ public class DBUtility {
         }
 
     }
+    public static void main(String[] args) {
+        //todo yaptigimiz metodu cagirdigimiz ve calistirdigimiz kisim
+        List<List< String >> tablo = getListData("select * from actor");
+
+        for (List<String>satir:tablo)
+            System.out.println("satir =" + satir);
+    }
 
 }
