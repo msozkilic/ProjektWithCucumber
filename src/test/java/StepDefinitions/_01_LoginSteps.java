@@ -16,6 +16,11 @@ import java.time.Duration;
 public class _01_LoginSteps extends Parent {
     DialogContent dc=new DialogContent();
 
+    @Given("Navigate to basqar")
+    public void navigateToBasqar(){
+        GWD.getDriver().get("https://test.mersys.io/");
+        GWD.getDriver().manage().window().maximize();}
+
 
 }
 
