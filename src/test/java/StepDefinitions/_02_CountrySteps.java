@@ -28,5 +28,9 @@ public class _02_CountrySteps {
         dc.findAndClick("saveButton");
     }
 
+    @Then("Success message should be displayed")
+    public void success_message_should_be_displayed() {
+        dc.findAndContainsText("successMessage", "success");
+    }
 
 }
