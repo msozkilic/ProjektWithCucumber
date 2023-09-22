@@ -17,26 +17,6 @@ public class _02_CountrySteps {
         ln.findAndClick("parameters");
         ln.findAndClick("countries");
     }
-    @When("Create a country")
-    public void create_a_country() {
-        String randomGenName= RandomStringUtils.randomAlphabetic(8);
-        String randomGenCode=RandomStringUtils.randomAlphabetic(4);
-        dc.findAndClick("addButton");
-        dc.findAndSend("nameInput", randomGenName);
-        dc.findAndSend("codeInput", randomGenCode);
-        dc.findAndClick("saveButton");
-    }
 
-    @Then("Success message should be displayed")
-    public void success_message_should_be_displayed() {
-        dc.findAndContainsText("successMessage", "success");
-    }
-    @When("Create a country name as {string} code as {string}")
-    public void create_a_country_name_as_code_as(String name, String code) {
-        dc.findAndClick("addButton");
-        dc.findAndSend("nameInput", name);
-        dc.findAndSend("codeInput", code);
-        dc.findAndClick("saveButton");
-    }
 
 }
