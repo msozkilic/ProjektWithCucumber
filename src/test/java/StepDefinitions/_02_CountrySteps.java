@@ -24,6 +24,7 @@ public class _02_CountrySteps {
         String randomGenCode=RandomStringUtils.randomAlphabetic(4);
         dc.findAndClick("addButton");
         dc.findAndSend("nameInput", randomGenName);
+        dc.findAndSend("codeInput", randomGenCode);
 
 
     }
