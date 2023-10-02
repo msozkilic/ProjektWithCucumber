@@ -23,9 +23,7 @@ public class _02_CountrySteps {
         String randomGenName= RandomStringUtils.randomAlphabetic(8);
         String randomGenCode=RandomStringUtils.randomAlphabetic(4);
         dc.findAndClick("addButton");
-        dc.findAndSend("nameInput", randomGenName);
-        dc.findAndSend("codeInput", randomGenCode);
-        dc.findAndClick("saveButton");
+
     }
 
     @Then("Success message should be displayed")
