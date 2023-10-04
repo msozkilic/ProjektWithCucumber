@@ -24,5 +24,14 @@ public class _04_CitizenShipSteps {
         leftNav.findAndClick("parameters");
         leftNav.findAndClick("citizenships");
     }
+    @When("User a Citizenship name as<CitizenshipName>short name as <ShortName>")
+    public void userCreateACitizenshipNameAsShortNameAs(String name, String shortname) {
+
+        dialogContent.findAndClick("addButton");
+        dialogContent.findAndSend("nameInput", name);
+        dialogContent.findAndSend("shortName", shortname);
+        dialogContent.findAndClick("saveButton");
+    }
+
 
 }
