@@ -18,4 +18,11 @@ public class _04_CitizenShipSteps {
     }
 
 
+    @And("Navigate to Cizienship page")
+    public void navigateToCizienshipPage() {
+        leftNav.findAndClick("setupOne");
+        leftNav.findAndClick("parameters");
+        leftNav.findAndClick("citizenships");
+    }
+
 }
