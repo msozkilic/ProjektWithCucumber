@@ -33,5 +33,10 @@ public class _04_CitizenShipSteps {
         dialogContent.findAndClick("saveButton");
     }
 
+    @Then("Already exist message should be displayed")
+    public void alreadyExistMessageShouldBeDisplayed() {
+
+        dialogContent.findAndContainsText("ErrorMessage", "Error");
+    }
 
 }
