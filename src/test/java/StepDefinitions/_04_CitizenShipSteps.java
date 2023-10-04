@@ -38,5 +38,9 @@ public class _04_CitizenShipSteps {
 
         dialogContent.findAndContainsText("ErrorMessage", "Error");
     }
+    @When("User delete the <CitizenshipName>")
+    public void userDeleteTheCitizenshipName(String arananKelime) {
+        dialogContent.searchAndDelete(arananKelime);
 
+    }
 }
