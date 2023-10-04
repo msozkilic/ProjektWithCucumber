@@ -17,30 +17,5 @@ public class _04_CitizenShipSteps {
         dialogContent.findAndClick("closeDialog");
     }
 
-    @And("Navigate to Cizienship page")
-    public void navigateToCizienshipPage() {
-        leftNav.findAndClick("setupOne");
-        leftNav.findAndClick("parameters");
-        leftNav.findAndClick("citizenships");
-    }
-    @When("User a Citizenship name as<CitizenshipName>short name as <ShortName>")
-    public void userCreateACitizenshipNameAsShortNameAs(String name, String shortname) {
-
-        dialogContent.findAndClick("addButton");
-        dialogContent.findAndSend("nameInput", name);
-        dialogContent.findAndSend("shortName", shortname);
-        dialogContent.findAndClick("saveButton");
-    }
-
-    @Then("Already exist message should be displayed")
-    public void alreadyExistMessageShouldBeDisplayed() {
-
-        dialogContent.findAndContainsText("ErrorMessage", "Error");
-    }
-    @When("User delete the <CitizenshipName>")
-    public void userDeleteTheCitizenshipName(String arananKelime) {
-        dialogContent.searchAndDelete(arananKelime);
-
-    }
 
 }
