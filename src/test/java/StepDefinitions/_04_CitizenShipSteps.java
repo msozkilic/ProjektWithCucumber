@@ -30,6 +30,7 @@ public class _04_CitizenShipSteps {
         dialogContent.findAndClick("addButton");
         dialogContent.findAndSend("nameInput", name);
         dialogContent.findAndSend("shortName", shortname);
+        dialogContent.findAndClick("saveButton");
 
 
 
