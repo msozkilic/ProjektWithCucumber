@@ -28,9 +28,7 @@ public class _04_CitizenShipSteps {
     public void userCreateACitizenshipNameAsShortNameAs(String name, String shortname) {
 
         dialogContent.findAndClick("addButton");
-        dialogContent.findAndSend("nameInput", name);
-        dialogContent.findAndSend("shortName", shortname);
-        dialogContent.findAndClick("saveButton");
+
     }
 
     @Then("Already exist message should be displayed")
