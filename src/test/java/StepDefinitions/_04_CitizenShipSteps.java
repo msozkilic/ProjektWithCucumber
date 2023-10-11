@@ -38,7 +38,7 @@ public class _04_CitizenShipSteps {
 
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
-
+        dialogContent.findAndContainsText("ErrorMessage", "Error");
 
     }
     @When("User delete the <CitizenshipName>")
