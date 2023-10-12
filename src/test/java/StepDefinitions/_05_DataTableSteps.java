@@ -13,7 +13,7 @@ import java.util.List;
 public class _05_DataTableSteps {
 
 
-
+    LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
 
     FormContent fc=new FormContent();
