@@ -19,6 +19,8 @@ public class _05_DataTableSteps {
     FormContent fc=new FormContent();
     @And("Click on the element in the left Nav")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+
 
     }
 
