@@ -20,7 +20,10 @@ public class _05_DataTableSteps {
     @And("Click on the element in the left Nav")
     public void clickOnTheElementInTheLeftNav(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
+        for (int i = 0; i < listElement.size(); i++) {
+            ln.findAndClick(listElement.get(i));
 
+        }
 
     }
 
