@@ -27,7 +27,7 @@ public class _05_DataTableSteps {
 
     }
 
-
+    @And("Click on the element in the Dialog")
     public void clickOnTheElementInTheDialog(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
 
