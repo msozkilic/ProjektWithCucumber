@@ -29,12 +29,7 @@ public class _05_DataTableSteps {
 
     @And("Click on the element in the Dialog")
     public void clickOnTheElementInTheDialog(DataTable elements) {
-        List<String> listElement = elements.asList(String.class);
 
-        for (int i = 0; i < listElement.size(); i++) {
-            ln.findAndClick(listElement.get(i));
-
-        }
     }
 
     @And("User sending the keys in Dialog content")
