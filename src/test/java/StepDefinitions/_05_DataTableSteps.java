@@ -32,7 +32,7 @@ public class _05_DataTableSteps {
         List<String> listElement = elements.asList(String.class);
 
         for (int i = 0; i < listElement.size(); i++) {
-
+            ln.findAndClick(listElement.get(i));
 
         }
     }
