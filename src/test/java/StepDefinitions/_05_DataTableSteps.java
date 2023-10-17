@@ -39,7 +39,10 @@ public class _05_DataTableSteps {
 
     @And("User sending the keys in Dialog content")
     public void userSendingTheKeysInDialogContent(DataTable elements) {
+        List<List<String>> listElement = elements.asLists(String.class);
 
+
+    }
 
     @And("User delete item from Dilaog")
     public void userDeleteItemFromDilaog(DataTable elements) {
