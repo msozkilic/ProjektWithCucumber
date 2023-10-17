@@ -39,13 +39,7 @@ public class _05_DataTableSteps {
 
     @And("User sending the keys in Dialog content")
     public void userSendingTheKeysInDialogContent(DataTable elements) {
-        List<List<String>> listElement = elements.asLists(String.class);
 
-        for (int i = 0; i < listElement.size(); i++) {
-            dc.findAndSend(listElement.get(i).get(0), listElement.get(i).get(1));
-            //todo listin ilk elemanina(webelement adi,ikincielemani yani degeri gönder)
-            }
-            }
 
     @And("User delete item from Dilaog")
     public void userDeleteItemFromDilaog(DataTable elements) {
