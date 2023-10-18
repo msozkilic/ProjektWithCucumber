@@ -55,7 +55,10 @@ public class _05_DataTableSteps {
             dc.searchAndDelete(listElement.get(i));
         }}
 
+    @And("Click on the element in the Form Content")
+    public void clickOnTheElementInTheFormContent(DataTable elements) {
 
+    }
 
 
 }
