@@ -59,7 +59,10 @@ public class _05_DataTableSteps {
     public void clickOnTheElementInTheFormContent(DataTable elements) {
         List<String> listElement = elements.asList(String.class);
 
+        for (int i = 0; i < listElement.size(); i++) {
+            fc.findAndClick(listElement.get(i));
 
+        }
     }
 
 
