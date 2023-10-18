@@ -57,6 +57,8 @@ public class _05_DataTableSteps {
 
     @And("Click on the element in the Form Content")
     public void clickOnTheElementInTheFormContent(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+
 
     }
 
