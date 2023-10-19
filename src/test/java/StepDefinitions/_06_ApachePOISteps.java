@@ -19,6 +19,8 @@ public class _06_ApachePOISteps  {
              ) {
             dialogContent.findAndClick("addButton");
             dialogContent.findAndSend("nameInput",satir.get(0));
+            dialogContent.findAndSend("shortName", satir.get(1));
+
 
         }
     }
