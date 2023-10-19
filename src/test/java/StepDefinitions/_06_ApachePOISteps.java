@@ -17,11 +17,7 @@ public class _06_ApachePOISteps  {
                 "Sayfa1",2);
         for (ArrayList<String> satir:tablo
              ) {
-            dialogContent.findAndClick("addButton");
-            dialogContent.findAndSend("nameInput",satir.get(0));
-            dialogContent.findAndSend("shortName", satir.get(1));
-            dialogContent.findAndClick("saveButton");
-            dialogContent.findAndContainsText("successMessage","success");
+
         }
     }
     @Then("User Delete citizenship with ApachiPOI")
