@@ -17,6 +17,7 @@ public class _06_ApachePOISteps  {
                 "Sayfa1",2);
         for (ArrayList<String> satir:tablo
              ) {
+            dialogContent.findAndClick("addButton");
 
         }
     }
