@@ -18,6 +18,7 @@ public class _06_ApachePOISteps  {
         for (ArrayList<String> satir:tablo
              ) {
             dialogContent.findAndClick("addButton");
+            dialogContent.findAndSend("nameInput",satir.get(0));
 
         }
     }
