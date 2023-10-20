@@ -30,6 +30,11 @@ public class _06_ApachePOISteps  {
         //todo kaydettiklerini yine excelden okuyarak sil
         ArrayList<ArrayList<String>>tablo=ExcelUtility.getListData("src/test/java/ApachiPOI/resource/ApacheExcel2.xlsx",
                 "Sayfa1",1);
+        for (ArrayList<String> satir:tablo
+        ) {
+            dialogContent.searchAndDelete(satir.get(0));
+
+        }
 
     }
 }
