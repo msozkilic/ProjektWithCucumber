@@ -33,7 +33,7 @@ public class _06_ApachePOISteps  {
         for (ArrayList<String> satir:tablo
         ) {
             dialogContent.searchAndDelete(satir.get(0));
-
+            dialogContent.findAndContainsText("successMessage","success");
         }
 
     }
