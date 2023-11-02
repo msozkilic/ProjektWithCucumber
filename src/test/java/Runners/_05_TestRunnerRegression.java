@@ -5,6 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
+        tags = "@SmokeTest or @Regression"
 
 )
 public class _05_TestRunnerRegression extends AbstractTestNGCucumberTests {
