@@ -6,7 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         tags = "@SmokeTest",
         features = {"src/test/java/FeatureFiles"},
-        glue = {"StepDefinitions"}
+        glue = {"StepDefinitions"},
+        plugin = {"html:target//cucumber-reports.html"}
 )
 public class _06_TestRunnerRegressionWithPlugin extends AbstractTestNGCucumberTests {
 }
