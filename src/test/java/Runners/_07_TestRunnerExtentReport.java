@@ -8,7 +8,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 
 
+@CucumberOptions(
 
+        features = {"src/test/java/FeatureFiles"},
+        glue = {"StepDefinitions"})
 
 @Listeners({ExtentITestListenerClassAdapter.class})
 public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
