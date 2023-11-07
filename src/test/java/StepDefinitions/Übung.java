@@ -5,37 +5,34 @@ import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Übung {
     public static void main(String[] args) {
 
-    }
-    public static ArrayList<ArrayList<String>>getData(String path,String sheet,int colounCount){
-        ArrayList<ArrayList<String>> doku=new ArrayList<>();
+      String[] kelime={"Ali","Ayse","Ahmet","3"};
 
-        Workbook workbook=null;
-        try {
-            FileInputStream inputStream=new FileInputStream(path);
-             workbook= WorkbookFactory.create(inputStream);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Sheet sheet1= workbook.getSheet(sheet);
-
-        for (int i = 0; i <sheet1.getPhysicalNumberOfRows(); i++) {
-
-            ArrayList<String> satirData=new ArrayList<>();
-
-            for (int j = 0; j <colounCount ; j++) {
-                satirData.add(sheet1.getRow(i).getCell(j).toString());
-
-            }
-            doku.add(satirData);
-
-        }
+        ArrayList<String> kelimeler=new ArrayList<>();
+        kelimeler.add("ali");
+        kelimeler.add(3,"o");
 
 
-        return doku;
+ArrayList<ArrayList<String>> ülke=new ArrayList<>();
+
+ArrayList<String> ilce=new ArrayList<>();
+ilce.add("bad berleburg");
+
+ArrayList<String>plaka=new ArrayList<>();
+plaka.add("5");
+
+ülke.add(ilce);
+ülke.add(plaka);
+        System.out.println(ülke);
+
+
     }
 }
+

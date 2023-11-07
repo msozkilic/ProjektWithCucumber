@@ -7,10 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 
-@CucumberOptions(
-        tags = "@SmokeTest",
-        features = {"src/test/java/FeatureFiles"},
-        glue = {"StepDefinitions"})
+
 
 
 @Listeners({ExtentITestListenerClassAdapter.class})
