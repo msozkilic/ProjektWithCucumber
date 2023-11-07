@@ -11,6 +11,7 @@ import org.testng.annotations.Listeners;
 @CucumberOptions(
 
         features = {"src/test/java/FeatureFiles"},
+        tags = "@SmokeTest",
         glue = {"StepDefinitions"})
 
 @Listeners({ExtentITestListenerClassAdapter.class})
