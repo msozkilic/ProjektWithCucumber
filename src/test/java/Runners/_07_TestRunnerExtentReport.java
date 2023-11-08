@@ -22,6 +22,7 @@ public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
         ExtentService.getInstance().setSystemInfo("Application Name","Campus");
         //ExtentService.getInstance().setSystemInfo("Operating System Info",System.getProperty());
         ExtentService.getInstance().setSystemInfo("Department","QA");
+        ExtentService.getInstance().setSystemInfo("Ek Satir","Aciklama");
 
 
 
