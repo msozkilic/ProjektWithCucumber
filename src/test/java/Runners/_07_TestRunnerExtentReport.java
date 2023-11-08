@@ -19,6 +19,8 @@ public class _07_TestRunnerExtentReport extends AbstractTestNGCucumberTests {
     @AfterClass
     public static void writeExtentReport() {
         ExtentService.getInstance().setSystemInfo("User Name","Serkan Kilic");
+        ExtentService.getInstance().setSystemInfo("Application Name","Campus");
+
 
     }
 }
