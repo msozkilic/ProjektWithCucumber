@@ -12,7 +12,10 @@ import org.testng.annotations.AfterClass;
         plugin = {"html:target//cucumber-reports.html"}
 )
 public class _08_TestRunnerParalel_ExtendReport extends AbstractTestNGCucumberTests {
+    @AfterClass
+    public static void writeExtentReport() {
 
+    }
 
 
 
