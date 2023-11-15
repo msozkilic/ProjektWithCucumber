@@ -18,7 +18,7 @@ public class _08_TestRunnerParalel_ExtendReport extends AbstractTestNGCucumberTe
         ExtentService.getInstance().setSystemInfo("Application Name","Campus");
         //ExtentService.getInstance().setSystemInfo("Operating System Info",System.getProperty());
         ExtentService.getInstance().setSystemInfo("Department","SDET");
-        ExtentService.getInstance().setSystemInfo("Ek Satir","Aciklama");
+        ExtentService.getInstance().setSystemInfo("Ek Satir","Aciklamalar");
     }
 
 
