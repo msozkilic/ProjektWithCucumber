@@ -14,7 +14,7 @@ import org.testng.annotations.AfterClass;
 public class _08_TestRunnerParalel_ExtendReport extends AbstractTestNGCucumberTests {
     @AfterClass
     public static void writeExtentReport() {
-        ExtentService.getInstance().setSystemInfo("User Name","Serkan Kilic");
+        ExtentService.getInstance().setSystemInfo("User Name","Ahmet Ak");
         ExtentService.getInstance().setSystemInfo("Application Name","Campus");
         //ExtentService.getInstance().setSystemInfo("Operating System Info",System.getProperty());
         ExtentService.getInstance().setSystemInfo("Department","QA");
