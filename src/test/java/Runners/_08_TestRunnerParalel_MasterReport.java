@@ -15,14 +15,6 @@ import org.testng.annotations.Parameters;
         // master report için
 )
 public class _08_TestRunnerParalel_MasterReport extends AbstractTestNGCucumberTests {
-    @BeforeClass(alwaysRun = true) // bazı java versiyon hatalırı için
 
-    @Parameters("browser")
-    public void beforeClass(String browser)
-    {
-        GWD.threadBrowserName.set(browser);
-        //burada browser set edilecek
-        // bu threade browsername set edildi.
-    }
 
 }
