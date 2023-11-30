@@ -8,7 +8,8 @@ import org.testng.annotations.Parameters;
 
 @CucumberOptions(
         tags = "@Regression",
-        features = {"src/test/java/FeatureFiles/"}
+        features = {"src/test/java/FeatureFiles/"},
+        glue = {"StepDefinitions"}
 
 
         // master report için
