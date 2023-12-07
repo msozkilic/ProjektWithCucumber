@@ -35,22 +35,7 @@ public class Parent {
         JavascriptExecutor js=(JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();",element);
     }
-    public void verifyContainsText(WebElement element,String text){
-        waitUntilVisible(element);
-        Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
-    }
-    public void waitUntilLoading(){
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar >*"),0));
 
-    }
-    public List<WebElement> waitVisibleListAllElement(List<WebElement> elementList){
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfAllElements(elementList));
-
-        return elementList;
-
-    }
     //todo burada yazilan bütün metodlardan sadece 2 tanesi return olan metod.Digerleri hep void.
     //todo cünkü void olan metodlarda sadece o elementin adini yazacagiz ve metodun adini yanina yazinca calisacak
     //todo ama return metodunda ise elementin adini yazacagiz,metodun da adini yazacagiz ve o metodla birlikte
