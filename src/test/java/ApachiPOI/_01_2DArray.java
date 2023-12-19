@@ -6,9 +6,14 @@ public class _01_2DArray {
         System.out.println("------------------------------------------");
         System.out.println(zoo[2][0]);
 
-
+        for (int i = 0; i < zoo.length; i++) {
+            for (int j = 0; j < zoo[i].length; j++) {
+                System.out.print(zoo[i][j] + " ");
+            }
+            System.out.println();
 
         }
     }
+}
 
 
