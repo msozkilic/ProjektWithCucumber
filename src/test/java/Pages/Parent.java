@@ -57,6 +57,10 @@ public class Parent {
     // todo bir deger gönderecegiz.Yani click metodunda her zaman sadece sadece click yapacak; send metodu ise
     //todo hem send yapacak hem de send icinde bir deger gönderecek.
 
+    //todo burada öncelikle wait metodunu yazdik,sonra scroll metodunu yazdik.Daha sonra bu iki metod ile click
+    //todo metodunu yazdik en son ise sendKeys metodunu bu 2 metodu icine alarak yazdik.Yani bekleyecek,scrool yapip gidecek,
+    //todo deger gönderilecek elementin icini temizleyecek clear ile.
+
 
 
 }

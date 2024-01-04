@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class FormContent extends Parent{
 
     public FormContent() {
+
         PageFactory.initElements(GWD.getDriver(),this);//todo driverimiz bizim GWD.getDriver
     }
 

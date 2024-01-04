@@ -30,13 +30,15 @@ public class GWD {
     // threadDriver.get() -> ilgili tread deki driveri verecek
     // threadDriver.set(driver) -> ilgili thread e driver set ediliyor.
 
+
+
     public static WebDriver getDriver() {
         // extend report türkçe bilg çalışmaması sebebiyle kondu
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language", "EN");
 
         Logger.getLogger("").setLevel(Level.SEVERE);
-        System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "Error");
+
 
         if (threadBrowserName.get() == null) // paralel çalışmayan yani XML den parametreyle gelmeyen ger çağıran
             threadBrowserName.set("chrome"); // Basic araynlar için
